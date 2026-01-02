@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single Door Fridge (210 Litre)</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#f8f9fa;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont;
+}
+.rm-card{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+.badge-rm{
+    background:#ffe5e5;
+    color:#d32f2f;
+    font-weight:600;
+}
+.price{
+    font-size:38px;
+    font-weight:700;
+    color:#0d6efd;
+}
+.feature-icon{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:#e7f1ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0d6efd;
+}
+.sticky-box{
+    position:sticky;
+    top:20px;
+}
+.faq-btn{
+    background:#f8f9fa;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!-- Alert -->
+    <div class="alert alert-warning d-flex gap-3 align-items-start rm-card">
+        <i class="fa-solid fa-triangle-exclamation fs-4"></i>
+        <div>
+            <span class="badge badge-rm mb-2">Next Day Delivery</span>
+            <p class="mb-0 fw-semibold">Not eligible for next day delivery. Please order early.</p>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <h2 class="fw-bold mt-4">Single Door Fridge (210 Litre)</h2>
+    <p class="text-muted">Brand may vary • 2 Star or above • Free delivery & installation</p>
+
+    <div class="row g-4 mt-2">
+
+        <!-- LEFT -->
+        <div class="col-lg-8">
+
+            <!-- Image -->
+            <div class="rm-card p-4 text-center mb-4">
+                <i class="fa-solid fa-refrigerator fs-1 text-secondary"></i>
+                <p class="mt-2 fw-semibold">210 Litre Single Door Refrigerator</p>
+            </div>
+
+            <!-- Features -->
+            <div class="rm-card p-4 mb-4">
+                <h5 class="fw-bold mb-3">Why Rent with Us?</h5>
+                <div class="row g-3">
+                    <div class="col-md-6 d-flex gap-3">
+                        <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+                        <div>
+                            <strong>Like new products</strong>
+                            <p class="mb-0 text-muted">25-step quality check</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex gap-3">
+                        <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <div>
+                            <strong>Free maintenance</strong>
+                            <p class="mb-0 text-muted">No extra cost</p>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 d-flex gap-3">
+                        <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                        <div>
+                            <strong>Easy returns</strong>
+                            <p class="mb-0 text-muted">No questions asked</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex gap-3">
+                        <div class="feature-icon"><i class="fa-solid fa-truck"></i></div>
+                        <div>
+                            <strong>Free relocation</strong>
+                            <p class="mb-0 text-muted">Move anytime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="rm-card p-4">
+                <h5 class="fw-bold mb-3">Product Details</h5>
+                <table class="table">
+                    <tr><th>Capacity</th><td>201-210 Litres</td></tr>
+                    <tr><th>Type</th><td>Single Door</td></tr>
+                    <tr><th>Brand</th><td>Whirlpool / Samsung / Godrej</td></tr>
+                    <tr><th>Energy Rating</th><td>2 Star or above</td></tr>
+                    <tr><th>Dimensions</th><td>21 x 21 x 52 inches</td></tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-4">
+            <div class="rm-card p-4 sticky-box">
+
+                <div class="text-center">
+                    <div class="price">₹773</div>
+                    <p class="text-muted mb-1">per month</p>
+                    <small class="text-muted">for 36 months</small>
+                </div>
+
+                <div class="bg-light rounded p-3 text-center my-3">
+                    <small class="text-muted">Refundable Deposit</small>
+                    <h5 class="fw-bold mb-0">₹773</h5>
+                </div>
+
+                <button class="btn btn-primary w-100 mb-2">
+                    <i class="fa-solid fa-cart-shopping"></i> Rent Now
+                </button>
+                <button class="btn btn-outline-primary w-100">
+                    <i class="fa-regular fa-heart"></i> Wishlist
+                </button>
+
+                <hr>
+
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><i class="fa-solid fa-check text-success"></i> Free delivery & installation</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-success"></i> Delivery in 3 days</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-success"></i> Easy returns</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mt-5">
+        <h4 class="fw-bold mb-3">Questions & Answers</h4>
+
+        <div class="accordion" id="faq">
+            <div class="accordion-item rm-card mb-2">
+                <button class="accordion-button faq-btn" data-bs-toggle="collapse" data-bs-target="#q1">
+                    How does renting work?
+                </button>
+                <div id="q1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        Choose product → Pay deposit → Complete KYC → Delivery & installation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item rm-card mb-2">
+                <button class="accordion-button collapsed faq-btn" data-bs-toggle="collapse" data-bs-target="#q2">
+                    Is the deposit refundable?
+                </button>
+                <div id="q2" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Yes, fully refundable within 72 hours after pickup.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

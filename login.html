@@ -5,131 +5,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Signup Modal</title>
 
-<!-- Bootstrap -->
+<!-- Bootstrap 5 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Inter Font (Same style as Rentomojo) -->
+<!-- Inter Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===== GLOBAL ===== */
-body{
-  background: rgba(0,0,0,0.35);
+body {
   font-family: 'Inter', sans-serif;
+  background: rgba(0,0,0,0.35);
 }
 
-/* ===== MODAL ===== */
-.modal-box{
-  max-width: 600px;
-  border-radius: 16px;
+/* Modal Box */
+.modal-box {
+  max-width: 620px;
+  border-radius: 18px;
   overflow: hidden;
+  background: #fff;
 }
 
-/* ===== RIGHT PANEL ===== */
-.right-box{
-  background:#f7f9fb;
+/* Right Panel */
+.right-box {
+  background: #f7f9fb;
+  padding: 40px 32px;
 }
 
-h5{
+/* Heading */
+h5 {
   font-weight: 500;
-  color:#2b2b2b;
+  font-size: 18px;
+  color: #2b2b2b;
   line-height: 1.4;
 }
 
-/* ===== INPUT ===== */
-.form-control{
+/* Input */
+.form-control {
   font-size: 14px;
-  padding: 12px;
-  border-radius: 6px;
+  padding: 14px 12px;
+  border-radius: 8px;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
 }
 
-.form-control::placeholder{
-  color:#999;
+.form-control:focus {
+  box-shadow: none;
+  border-bottom-color: #1bb5a6;
 }
 
-/* ===== COUNTER ===== */
-.counter{
+/* Counter */
+.counter {
   font-size: 12.5px;
-  color:#888;
+  color: #888;
   text-align: right;
 }
 
-/* ===== CHECKBOX ===== */
-.form-check-label{
+/* Checkbox */
+.form-check-label {
   font-size: 13.5px;
-  color:#555;
+  color: #555;
 }
 
-.form-check-input{
+.form-check-input {
   width: 18px;
   height: 18px;
 }
 
-/* ===== BUTTON ===== */
-.continue-btn{
-  background:#c7c7c7;
-  color:#fff;
-  border:none;
+/* Button */
+.continue-btn {
+  background: #c7c7c7;
+  color: #fff;
+  border: none;
   font-size: 15px;
   font-weight: 500;
-  padding: 12px;
-  border-radius: 8px;
-  cursor:not-allowed;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: not-allowed;
 }
 
-.continue-btn.active{
-  background:#e53935;
-  cursor:pointer;
+.continue-btn.active {
+  background: #e53935;
+  cursor: pointer;
 }
 </style>
 </head>
-
 <body>
 
 <div class="d-flex justify-content-center align-items-center vh-100">
-  <div class="modal-box bg-white shadow row w-100">
+  <div class="modal-box shadow row w-100 position-relative">
 
-    <!-- LEFT IMAGE -->
+    <!-- Close Button -->
+    <!-- <button class="btn position-absolute top-0 end-0 m-3 p-0 border-0 bg-transparent">
+      <img src="https://www.rentomojo.com/public/images/smartAuth/close.svg" width="18" alt="Close">
+    </button> -->
+
+    <!-- Left Image -->
     <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center">
       <img src="assets/img/272.jpg" class="img-fluid p-4" alt="Illustration">
     </div>
 
-    <!-- RIGHT CONTENT -->
-    <div class="col-md-6 p-4 right-box">
+    <!-- Right Content -->
+    <div class="col-md-6 right-box">
 
-      <h5 class="mb-3">
-        Enter your number to<br>
-        Signup or Login
-      </h5>
+<button class="btn position-absolute top-0 end-0 m-3 p-0 border-0 bg-transparent">
+  <img src="https://www.rentomojo.com/public/images/smartAuth/close.svg" width="18" alt="Close">
+</button>
 
-      <!-- PHONE INPUT -->
-      <input type="text"
-        id="phone"
-        class="form-control mb-1"
-        placeholder="Enter your phone number"
-        maxlength="10">
+      
+      <h5 class="mb-3">Enter your number to<br>Signup or Login</h5>
 
-      <!-- COUNTER -->
-      <div class="counter mb-3">
-        <span id="count">0</span> / 10
-      </div>
+      <!-- Phone Input -->
+      <input type="text" id="phone" class="form-control mb-1" placeholder="Enter your phone number" maxlength="10">
 
-      <!-- CHECKBOX 1 -->
+      <!-- Counter -->
+      <div class="counter mb-3"><span id="count">0</span> / 10</div>
+
+      <!-- Terms Checkbox -->
       <div class="form-check mb-2">
         <input class="form-check-input" type="checkbox" id="terms">
         <label class="form-check-label" for="terms">
           I agree to the
-          <a href="#" class="text-info text-decoration-none">
-            terms and conditions
-          </a>
-          &
-          <a href="#" class="text-info text-decoration-none">
-            privacy policies
-          </a>
+          <a href="#" class="text-info text-decoration-none">terms and conditions</a>
+          & 
+          <a href="#" class="text-info text-decoration-none">privacy policies</a>
         </label>
       </div>
 
-      <!-- CHECKBOX 2 -->
+      <!-- Consultation Checkbox -->
       <div class="form-check mb-4">
         <input class="form-check-input" type="checkbox" id="consult">
         <label class="form-check-label" for="consult">
@@ -137,12 +139,8 @@ h5{
         </label>
       </div>
 
-      <!-- BUTTON -->
-      <button id="continueBtn"
-        class="btn continue-btn w-100"
-        disabled>
-        Continue
-      </button>
+      <!-- Continue Button -->
+      <button id="continueBtn" class="btn continue-btn w-100" disabled>Continue</button>
 
     </div>
   </div>
@@ -156,21 +154,21 @@ const terms = document.getElementById("terms");
 const consult = document.getElementById("consult");
 const btn = document.getElementById("continueBtn");
 
-function validate(){
+function validate() {
   const phoneValid = phone.value.length === 10;
   const checkboxValid = terms.checked && consult.checked;
 
-  if(phoneValid && checkboxValid){
+  if (phoneValid && checkboxValid) {
     btn.classList.add("active");
     btn.disabled = false;
-  }else{
+  } else {
     btn.classList.remove("active");
     btn.disabled = true;
   }
 }
 
 phone.addEventListener("input", () => {
-  phone.value = phone.value.replace(/\D/g,'');
+  phone.value = phone.value.replace(/\D/g,''); // Only digits
   count.innerText = phone.value.length;
   validate();
 });

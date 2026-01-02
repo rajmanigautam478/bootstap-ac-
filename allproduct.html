@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Refrigerators on Rent</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body{
+  background:#f5f7fb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+.card{
+  border-radius:14px;
+  border:1px solid #eee;
+  transition:.25s ease;
+}
+.card:hover{
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  transform:translateY(-4px);
+}
+.card-img-top{
+  height:180px;
+  object-fit:contain;
+  padding:12px;
+}
+.badge-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  font-size:11px;
+}
+.wishlist{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#fff;
+  padding:5px 7px;
+  border-radius:50%;
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+.price{
+  font-weight:600;
+}
+small{
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container py-4">
+
+  <!-- Heading -->
+  <div class="mb-4">
+    <h4 class="fw-semibold mb-0">Refrigerators on rent</h4>
+    <small class="text-muted">Checkout our huge collection of refrigerators on rent</small>
+  </div>
+
+  <!-- Filters -->
+  <div class="row g-3 align-items-center mb-4">
+    <div class="col-md-3">
+      <select class="form-select" id="tenure">
+        <option value="">Choose Rental Tenure</option>
+        <option value="12">12 Months</option>
+        <option value="6">6 Months</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <select class="form-select" id="brand">
+        <option value="">Choose Product Type</option>
+        <option value="single">Single Door</option>
+        <option value="double">Double Door</option>
+        <option value="mini">Mini Fridge</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <select class="form-select" id="ram">
+        <option value="">Choose Variant</option>
+        <option value="170">170 Litre</option>
+        <option value="190">190 Litre</option>
+        <option value="210">210 Litre</option>
+        <option value="260">260 Litre</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-outline-secondary w-100" onclick="resetFilters()">Reset</button>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="row g-4" id="products"></div>
+
+</div>
+
+<script>
+const laptops = [
+ {name:"Single Door Refrigerator 170L", price:449, brand:"single", ram:"170", tag:"Popular", img:"https://images.unsplash.com/photo-1615874959474-d609969a20ed"},
+ {name:"Single Door Refrigerator 190L", price:499, brand:"single", ram:"190", img:"https://images.unsplash.com/photo-1581579185169-3c1f2bfa5b07"},
+ {name:"Single Door Refrigerator 210L", price:549, brand:"single", ram:"210", img:"https://images.unsplash.com/photo-1586201375761-83865001e31c"},
+ {name:"Double Door Refrigerator 260L", price:899, brand:"double", ram:"260", tag:"Best Seller", img:"https://images.unsplash.com/photo-1617093727343-374698b1b08d"},
+ {name:"Double Door Refrigerator 240L", price:799, brand:"double", ram:"210", img:"https://images.unsplash.com/photo-1586201375761-83865001e31c"},
+ {name:"Mini Refrigerator", price:399, brand:"mini", ram:"170", img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c"},
+ {name:"Samsung Single Door 190L", price:649, brand:"single", ram:"190", img:"https://images.unsplash.com/photo-1615874959474-d609969a20ed"},
+ {name:"LG Double Door 260L", price:999, brand:"double", ram:"260", img:"https://images.unsplash.com/photo-1617093727343-374698b1b08d"}
+];
+
+const box = document.getElementById("products");
+
+function render(list){
+ box.innerHTML="";
+ list.forEach(p=>{
+  box.innerHTML += `
+  <div class="col-xl-3 col-lg-4 col-md-6">
+    <div class="card h-100 position-relative">
+      ${p.tag ? `<span class="badge bg-warning text-dark badge-tag">${p.tag}</span>` : ""}
+      <div class="wishlist"><i class="bi bi-heart"></i></div>
+      <img src="${p.img}" class="card-img-top">
+      <div class="card-body">
+        <h6 class="card-title">${p.name}</h6>
+        <p class="price mb-1">₹${p.price}/mo</p>
+        <small class="text-muted">🚚 2–4 days</small>
+      </div>
+    </div>
+  </div>`;
+ });
+}
+
+function filterData(){
+ const brand = document.getElementById("brand").value;
+ const ram = document.getElementById("ram").value;
+
+ const result = laptops.filter(p=>{
+  return (brand==="" || p.brand===brand) &&
+         (ram==="" || p.ram===ram);
+ });
+
+ render(result);
+}
+
+function resetFilters(){
+ document.getElementById("tenure").value="";
+ document.getElementById("brand").value="";
+ document.getElementById("ram").value="";
+ render(laptops);
+}
+
+document.querySelectorAll("select").forEach(s=>{
+ s.addEventListener("change", filterData);
+});
+
+render(laptops);
+</script>
+
+</body>
+</html>

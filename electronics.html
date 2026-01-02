@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronics on Rent</title>
+
+<!-- BOOTSTRAP CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#fff;
+}
+
+
+.section-title {
+    text-align: center;
+    margin: 50px 0 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: red;
+    display: block;
+    margin: 10px auto 0;
+}
+
+
+/* NORMAL CARD */
+.room-card{
+    position:relative;
+    margin-bottom: 30px;
+}
+.room-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:4px;
+}
+.card-label{
+    position:absolute;
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#fff;
+    padding:12px 24px;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    border-radius:6px;
+    text-align:center;
+    min-width:200px;
+}
+
+/* VIEW ALL CARD */
+.view-all-card{
+    height:260px;
+    border:1px solid #eef2f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.view-all-btn{
+    text-decoration:none;
+    color:#1bb7c9;
+    text-align:center;
+}
+.arrow-circle{
+    width:50px;
+    height:50px;
+    border:2px solid #1bb7c9;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    margin:auto;
+    margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container py-5   "  >
+
+
+
+ <!-- HEADER -->
+    <div class="d-flex align-items-center gap-3 mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+            <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923z"/>
+        </svg>
+        <div>
+            <h2 class="mb-0">Packages on rent</h2>
+            <p class="text-muted mb-0">Checkout our huge collection of packages on rent</p>
+        </div>
+    </div>
+
+
+
+   <h3 class="section-title">Choose by Room Type</h3>
+
+    <div class="row g-3">
+
+        <!-- CARD 1 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="room-card">
+                 <img src="assets/img/smartphones_new.webp">
+                <div class="card-label">
+                  
+                    <small>26 Package(s)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="room-card">
+                  <img src="assets/img/smart-devices-v1_new.webp">
+                <div class="card-label">
+                  
+                    <small>22 Package(s)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="room-card">
+                <img src="assets/img/smartphones_new.webp">
+                <div class="card-label">
+                  
+                    <small>18 Package(s)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="room-card">
+                 <img src="assets/img/laptops_new_2.webp">
+                <div class="card-label">
+                    
+                    <small>12 Package(s)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="room-card">
+                  <img src="assets/img/smartphones_new.webp">
+                <div class="card-label">
+                    
+                    <small>10 Package(s)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="room-card">
+                <img src="assets/img/gamingConsole.webp">
+                <div class="card-label">
+                    
+                    <small>8 Package(s)</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW ALL CARD -->
+        <div class="col-lg-3 col-md-6">
+            <div class="view-all-card">
+                <a href="#" class="view-all-btn">
+                    <div class="arrow-circle">&#8250;</div>
+                    <div>View All in Electronics</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
