@@ -1,0 +1,119 @@
+body{
+  font-family: Inter, system-ui, sans-serif;
+  background:#fff;
+}
+
+/* MAIN SECTION HEIGHT */
+.product-section{
+  min-height:75vh;
+}
+
+/* IMAGE AREA */
+.main-img{
+  border:1px solid #eee;
+  border-radius:12px;
+  padding:15px;
+  background:#fafafa;
+}
+.main-img img{
+  width:100%;
+  border-radius:10px;
+}
+
+.thumb-row{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+.thumb{
+  width:72px;
+  height:60px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  overflow:hidden;
+  cursor:pointer;
+}
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* FEATURES BELOW IMAGE */
+.feature-box{
+  border:1px solid #e9ecef;
+  border-radius:10px;
+  padding:12px;
+  font-size:13px;
+  text-align:center;
+  height:100%;
+}
+.feature-box img{
+  width:28px;
+  margin-bottom:6px;
+}
+
+/* PRODUCT INFO */
+.product-title{
+  font-size:22px;
+  font-weight:600;
+}
+.rating{
+  font-size:14px;
+  color:#28a745;
+}
+
+/* OPTIONS */
+.option-title{
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+.option-box button{
+  border:1px solid #dee2e6;
+  background:#fff;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:14px;
+}
+.option-box button.active{
+  border-color:#0dcaf0;
+  color:#0dcaf0;
+}
+
+/* PRICE */
+.price-box{
+  border:1px solid #e9ecef;
+  border-radius:12px;
+  padding:18px;
+  margin:20px 0;
+}
+.price{
+  font-size:28px;
+  font-weight:700;
+}
+.price span{
+  font-size:14px;
+  color:#6c757d;
+}
+
+/* CTA */
+.btn-rent{
+  background:#e53935;
+  color:#fff;
+  font-weight:500;
+}
+.btn-rent:hover{
+  background:#d32f2f;
+  color:#fff;
+}
+
+/* BENEFITS */
+.benefit{
+  font-size:14px;
+  margin-bottom:6px;
+}
+.benefit span{
+  color:#0dcaf0;
+  font-weight:600;
+}

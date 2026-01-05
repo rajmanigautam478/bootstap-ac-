@@ -7,96 +7,74 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/fitness.css">
 <style>
-  body{
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  body {
+    margin: 0;
+    padding: 0;
   }
-
-  /* Heading */
-  .main-title{
-    font-size: 22px;
-    font-weight: 600;
-  }
-  .sub-title{
-    font-size: 14px;
-    color: #6c757d;
-  }
-
-  /* Browse title */
-  .browse-title{
-    font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    display: inline-block;
-  }
-  .browse-title::after{
-    content: "";
-    width: 32px;
-    height: 2px;
-    background: red;
-    display: block;
-    margin: 8px auto 0;
-  }
-
-  /* Card */
-  .fitness-card{
-    border: 1px solid #eee;
-    border-radius: 6px;
+  .packages-header {
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
     background: #fff;
-    overflow: none;
-    text-align: center;
-    position: relative;
-    margin-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
   }
-
-  /* Image */
-  .fitness-card img{
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
+  .category-menu a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 15px; /* Increased font size slightly */
+    font-weight: 500; /* Medium font weight */
+    margin: 0 10px; /* Added horizontal margin */
+    transition: color 0.2s ease-in-out;
   }
-
-  /* Text BELOW image (correct) */
-  .fitness-card .card-text{
-   position:absolute;
-    bottom:-20px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#fff;
-    padding:12px 24px;
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
-    border-radius:6px;
-    text-align:center;
-    min-width:200px;
-
+  .category-menu a:hover {
+    color: #dc3545; /* Bootstrap's danger color, as used elsewhere */
   }
-
-  /* View all */
-  .view-all{
-    margin-top: 40px;
-    font-size: 14px;
-    color: #0dcaf0;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-  }
-  .view-all span{
-    width: 18px;
-    height: 18px;
-    border: 1px solid #0dcaf0;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+  .category-menu a.active {
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 5px;
   }
 </style>
 </head>
 
 <body>
+<!-- ================= HEADER STRIP ================= -->
+<div class="packages-header py-3 sticky-top">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
 
+        <!-- LEFT : Breadcrumb (Dynamic) -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none text-muted">Home</a>
+            </li>
+            
+          </ol>
+        </nav>
+
+        <!-- RIGHT : Category Menu -->
+        <div class="category-menu d-none d-md-flex align-items-center">
+        
+           <a href="furniture.html">Furniture</a>
+          <a href="application.html">Appliances</a>
+          <a href="electronics.html">Electronics</a>
+          <a href="packages.html">Packages</a>
+          <a href="fitness.html">Fitness</a>
+          <a href="babykid.html">Baby & Kids</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================= HEADER END ================= -->
 <div class="container my-5">
 
   <!-- Top Heading -->
@@ -156,7 +134,97 @@
   </div>
 
 </div>
+<footer class="bg-light pt-5">
+  <div class="container">
 
+    <!-- Top Read More -->
+    
+
+    <!-- Main Footer -->
+    <div class="row gy-4">
+
+      <!-- Column 1 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">RENTOMOJO</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Our Benefits</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">B2B - Rentomojo for Business</a></li>
+          <li><a href="#">Mojo Mover</a></li>
+          <li><a href="#">AQI</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">INFORMATION</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support Home</a></li>
+          <li><a href="#">Documents Required</a></li>
+          <li><a href="#">Annual Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">POLICIES</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Cancellation & Return</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">CSR Policy</a></li>
+          <li><a href="#">Rental Terms & Conditions</a></li>
+          <li><a href="#">Referral Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">NEED HELP ?</h6>
+        <p class="text-muted small">
+          <i class="bi bi-send me-2"></i> jo@rentomojo.com
+        </p>
+
+        <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
+        <div class="d-flex gap-2">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Footer -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+
+      <p class="text-muted small mb-2 mb-md-0">
+        © 2025, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)
+      </p>
+
+      <div class="d-flex gap-3 social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+
+      <a href="#" class="text-muted small text-decoration-none">
+        Go Up <i class="bi bi-chevron-up"></i>
+      </a>
+
+    </div>
+
+  </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -10,214 +10,74 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/crousel1.css">
 <style>
-.hero-section{
-  background: url('	https://www.rentomojo.com/mojo-mover/images/banner-desktop.webp') center/cover no-repeat;
-  min-height: 100vh;
-  position: relative;
-}
-.hero-overlay{
-  background: rgba(0,0,0,0.55);
-  min-height: 100vh;
-}
-.mojo-badge{
-  background:#e53935;
-  color:#fff;
-  padding:10px 16px;
-  border-radius:8px;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-weight:600;
-}
-.hero-text h1{
-  font-size:3rem;
-  font-weight:700;
-}
-.quote-card{
-  background:#fff;
-  border-radius:12px;
-  padding:24px;
-}
-.form-control{
-  height:40px;
-  width: 35px;
-}
-.get-quote-btn{
-  background:#e53935;
-  color:#fff;
-  border:none;
-  height:52px;
-  font-size:18px;
-  font-weight:600;
-}
-.get-quote-btn:hover{
-  background:#d32f2f;
-}
-@media(max-width:768px){
-  .hero-text h1{
-    font-size:2.2rem;
+  body {
+    margin: 0;
+    padding: 0;
   }
-}
-
-
-/* 2 css */
-
-.why-section{
-  background: linear-gradient(90deg,#f6bfd4 0%,#c9c3e8 50%,#a9c8ef 100%);
-  padding: 10px 0;
-  border-radius: 30px;
-}
-
-.why-card{
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(10px);
-  border-radius: 18px;
-  padding: 26px 22px;
-  height: 100%;
-}
-
-.why-icon{
-  font-size: 34px;
-  margin-bottom: 14px;
-}
-
-.why-card h5{
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.why-card p{
-  font-size: 15px;
-  color: #555;
-}
-/* 3 sectiom */
-
-.how-it-works{
-  padding: 60px 0;
-}
-
-.work-card{
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 16px;
-  padding: 28px 24px;
-  height: 100%;
-  position: relative;
-}
-
-.step-no{
-  font-size: 48px;
-  font-weight: 800;
-  color: #fff;
-  -webkit-text-stroke: 2px #ff4d4d;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.work-card h5{
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.work-card p{
-  font-size: 15px;
-  color: #666;
-}
-
-/* 4 section */
-
-.choose-services{
-  padding: 60px 0;
-}
-
-.mojo-banner{
-  position: relative;
-}
-
-.mojo-title{
-  font-size: 72px;
-  font-weight: 900;
-  color: #e53935;
-  letter-spacing: 4px;
-}
-
-.service-card{
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 100%;
-}
-
-.service-card img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service-overlay{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  color: #fff;
-}
-
-.service-overlay h5{
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.service-overlay p{
-  font-size: 14px;
-  margin: 0;
-}
-
-@media(max-width:768px){
-  .mojo-title{
-    font-size: 42px;
+  .packages-header {
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
   }
-}
-/* 5 section */
-.faq-section{
-  padding: 60px 0;
-}
-
-.faq-item{
-  border: 1px solid #eee;
-  border-radius: 14px;
-  margin-bottom: 16px;
-  overflow: hidden;
-}
-
-.accordion-button{
-  font-weight: 600;
-  padding: 18px 20px;
-  background: #fff;
-}
-
-.accordion-button:not(.collapsed){
-  background: #fff;
-  color: #000;
-  box-shadow: none;
-}
-
-.accordion-button:focus{
-  box-shadow: none;
-}
-
-.accordion-body{
-  color: #666;
-  font-size: 15px;
-  padding: 0 20px 18px;
-}
-
-
+  .category-menu a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 15px; /* Increased font size slightly */
+    font-weight: 500; /* Medium font weight */
+    margin: 0 10px; /* Added horizontal margin */
+    transition: color 0.2s ease-in-out;
+  }
+  .category-menu a:hover {
+    color: #dc3545; /* Bootstrap's danger color, as used elsewhere */
+  }
+  .category-menu a.active {
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 5px;
+  }
 </style>
 </head>
 
 <body>
+    <!-- ================= HEADER STRIP ================= -->
+<div class="packages-header py-3 sticky-top">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+
+        <!-- LEFT : Breadcrumb (Dynamic) -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none text-muted">Home</a>
+            </li>
+            
+          </ol>
+        </nav>
+
+        <!-- RIGHT : Category Menu -->
+        <div class="category-menu d-none d-md-flex align-items-center">
+        
+          <a href="furniture.html">Furniture</a>
+          <a href="application.html">Appliances</a>
+          <a href="electronics.html">Electronics</a>
+          <a href="packages.html">Packages</a>
+          <a href="fitness.html">Fitness</a>
+          <a href="babykid.html">Baby & Kids</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================= HEADER END ================= -->
 
 <section class="hero-section">
   <div class="hero-overlay d-flex align-items-center">
@@ -245,50 +105,49 @@
             <p class="fw-semibold mb-3">
               Just enter your details and our executive will get in touch with you.
             </p>
-
-            <div class="mb-3">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-person"></i></span>
-                <input type="text" class="form-control" placeholder="Enter Full Name*">
+            <form>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Full Name*">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" class="form-control" placeholder="Enter Phone Number*">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="Enter Email Address*">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Pickup Pincode*">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-geo"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Drop Pincode*">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn w-100 get-quote-btn">Get Quote</button>
+                </div>
               </div>
-            </div>
-
-            <div class="mb-3">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-telephone"></i></span>
-                <input type="tel" class="form-control" placeholder="Enter Phone Number*">
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Enter Email Address*">
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
-                <input type="text" class="form-control" placeholder="Enter Pickup Pincode*">
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-geo"></i></span>
-                <input type="text" class="form-control" placeholder="Enter Drop Pincode*">
-              </div>
-            </div>
-
-            <div class="mb-4">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-                <input type="date" class="form-control">
-              </div>
-            </div>
-
-            <button class="btn w-100 get-quote-btn">Get Quote</button>
+            </form>
           </div>
         </div>
 
@@ -301,10 +160,10 @@
 
 
 <!-- WHY CHOOSE SECTION START -->
-<section class="why-section ">
+<section class="why-section py-5">
   <div class="container">
 
-    <h2 class="fw-bold mb-5">Why Choose Mojo Mover in Noida?</h2>
+    <h2 class="fw-bold mb-5 text-center">Why Choose Mojo Mover in Noida?</h2>
 
     <div class="row g-4">
 
@@ -359,8 +218,8 @@
 <section class="how-it-works my-5">
   <div class="container">
 
-    <h2 class="fw-bold mb-2">How Mojo Mover Works in Noida</h2>
-    <p class="text-muted mb-5">
+    <h2 class="fw-bold mb-2 text-center">How Mojo Mover Works in Noida</h2>
+    <p class="text-muted mb-5 text-center">
       We simplify your shifting experience in Noida with an end-to-end process
       designed for speed, safety, and convenience.
     </p>
@@ -431,7 +290,7 @@
 
     </div>
 
-    <h2 class="fw-bold mb-4">Choose Our Packers and Movers Services in Noida?</h2>
+    <h2 class="fw-bold mb-4 text-center">Choose Our Packers and Movers Services in Noida?</h2>
 
     <div class="row g-4">
 
@@ -478,7 +337,7 @@
 <section class="faq-section my-5">
   <div class="container">
 
-    <h2 class="fw-bold mb-4">Frequently Asked Questions</h2>
+    <h2 class="fw-bold mb-4 text-center">Frequently Asked Questions</h2>
 
     <div class="accordion" id="faqAccordion">
 
@@ -538,7 +397,97 @@
 </section>
 <!-- FAQ SECTION END -->
 
+<footer class="bg-light pt-5">
+  <div class="container">
 
+    <!-- Top Read More -->
+    
+
+    <!-- Main Footer -->
+    <div class="row gy-4">
+
+      <!-- Column 1 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">RENTOMOJO</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Our Benefits</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">B2B - Rentomojo for Business</a></li>
+          <li><a href="#">Mojo Mover</a></li>
+          <li><a href="#">AQI</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">INFORMATION</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support Home</a></li>
+          <li><a href="#">Documents Required</a></li>
+          <li><a href="#">Annual Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">POLICIES</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Cancellation & Return</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">CSR Policy</a></li>
+          <li><a href="#">Rental Terms & Conditions</a></li>
+          <li><a href="#">Referral Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">NEED HELP ?</h6>
+        <p class="text-muted small">
+          <i class="bi bi-send me-2"></i> jo@rentomojo.com
+        </p>
+
+        <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
+        <div class="d-flex gap-2">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Footer -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+
+      <p class="text-muted small mb-2 mb-md-0">
+        © 2025, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)
+      </p>
+
+      <div class="d-flex gap-3 social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+
+      <a href="#" class="text-muted small text-decoration-none">
+        Go Up <i class="bi bi-chevron-up"></i>
+      </a>
+
+    </div>
+
+  </div>
+</footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

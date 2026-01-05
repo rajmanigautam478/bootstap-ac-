@@ -9,239 +9,80 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/detail.css">
 <style>
-
-/* ================= GLOBAL ================= */
-body{
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-    background:#f8f9fa;
-}
-
-/* ================= LEFT IMAGE ================= */
-.main-img-container{
-    position:relative;
-    height:650px;
-}
-.main-img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:22px;
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
-}
-
-/* ================= THUMBNAILS ================= */
-.thumbnails-container{
-    position:absolute;
-    bottom:24px;
-    right:24px;
-    display:flex;
-    gap:12px;
-    background:#fff;
-    padding:14px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-.thumb-img{
-    width:88px;
-    height:88px;
-    object-fit:cover;
-    border-radius:14px;
-    cursor:pointer;
-    border:3px solid transparent;
-    transition:.3s;
-}
-.thumb-img:hover,
-.thumb-img.active{
-    border-color:#dc3545;
-    transform:scale(1.08);
-}
-
-/* ================= RIGHT CARD ================= */
-.right-card{
-    background:#ffffff;
-    border-radius:24px;
-    padding:32px;
-    border:1px solid #f1f1f1;
-    box-shadow:0 18px 45px rgba(0,0,0,.12);
-}
-
-/* heart */
-.right-card .bi-heart{
-    cursor:pointer;
-    transition:.3s;
-}
-.right-card .bi-heart:hover{
-    color:#dc3545;
-    transform:scale(1.15);
-}
-
-/* product title */
-.product-title{
-    font-size:1.5rem;
-    font-weight:900;
-    line-height:1.3;
-    margin-bottom:12px;
-}
-
-/* deposit */
-.deposit-text{
-    background:#f8f9fa;
-    border:1px dashed #dee2e6;
-    padding:14px 16px;
-    border-radius:14px;
-    color:#495057;
-    font-weight:700;
-    font-size:.95rem;
-}
-
-/* divider */
-.right-card .mb-4{
-    padding-bottom:22px;
-    border-bottom:1px solid #f1f1f1;
-}
-.right-card .mb-4:last-child{
-    border-bottom:none;
-    padding-bottom:0;
-}
-
-/* ================= CAPACITY ================= */
-.capacity-btn{
-    background:#f8f9fa;
-    border:1px solid #dee2e6;
-    border-radius:12px;
-    padding:10px 20px;
-    font-weight:700;
-    transition:.3s;
-}
-.capacity-btn:hover{
-    border-color:#dc3545;
-    color:#dc3545;
-}
-.capacity-btn.active{
-    background:#dc3545;
-    border-color:#dc3545;
-    color:#fff;
-    box-shadow:0 8px 20px rgba(220,53,69,.35);
-}
-
-/* ================= TENURE ================= */
-.tenure-label{
-    font-weight:800;
-    font-size:1rem;
-}
-.compare-link{
-    font-size:.85rem;
-    color:#dc3545;
-    font-weight:700;
-    text-decoration:none;
-}
-
-/* ================= PRICE ================= */
-.price-box{
-    background:#fff5f5;
-    border-radius:18px;
-    padding:20px;
-    border:1px solid #ffe3e3;
-}
-.monthly-price{
-    font-size:3.4rem;
-    font-weight:900;
-    color:#dc3545;
-    letter-spacing:-1.5px;
-}
-.monthly-price small{
-    font-size:1.4rem;
-    color:#adb5bd;
-    font-weight:600;
-    text-decoration:line-through;
-}
-
-/* ================= PROMO ================= */
-.promo-banner{
-    background:linear-gradient(135deg,#fff0f0,#ffe1e1);
-    border-radius:18px;
-    padding:18px;
-    text-align:center;
-    font-weight:800;
-    border:1px solid #ffc9c9;
-}
-
-/* ================= BUTTONS ================= */
-.btn-advance{
-    background:#fff0f0;
-    color:#dc3545;
-    border:none;
-    padding:16px;
-    border-radius:16px;
-    font-weight:800;
-    transition:.3s;
-}
-.btn-advance:hover{
-    background:#dc3545;
-    color:#fff;
-}
-.btn-book{
-    background:linear-gradient(135deg,#dc3545,#b02a37);
-    color:#fff;
-    padding:20px;
-    border-radius:18px;
-    font-weight:900;
-    box-shadow:0 18px 40px rgba(220,53,69,.45);
-    transition:.3s;
-}
-.btn-book:hover{
-    transform:translateY(-3px);
-    box-shadow:0 25px 55px rgba(220,53,69,.6);
-}
-
-/* ================= FEATURES ================= */
-.section-title{
-    font-size:1.6rem;
-    font-weight:900;
-    margin:60px 0 32px;
-}
-.feature-box{
-    background:#fff;
-    border-radius:18px;
-    padding:22px 16px;
-    text-align:center;
-    border:1px solid #f1f1f1;
-    transition:.3s;
-}
-.feature-box:hover{
-    transform:translateY(-4px);
-    border-color:#dc3545;
-}
-.feature-icon{
-    width:72px;
-    height:72px;
-    background:#fff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 14px;
-    border:1px solid #f1f1f1;
-}
-.feature-icon img{
-    width:36px;
-}
-.feature-box p{
-    font-weight:700;
-    margin:0;
-}
-
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .packages-header {
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .category-menu a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 15px; /* Increased font size slightly */
+    font-weight: 500; /* Medium font weight */
+    margin: 0 10px; /* Added horizontal margin */
+    transition: color 0.2s ease-in-out;
+  }
+  .category-menu a:hover {
+    color: #dc3545; /* Bootstrap's danger color, as used elsewhere */
+  }
+  .category-menu a.active {
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 5px;
+  }
 </style>
 </head>
 
 <body>
 
-<div class="container my-5">
-<div class="row">
+<!-- ================= HEADER STRIP ================= -->
+<div class="packages-header py-3 sticky-top">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+
+        <!-- LEFT : Breadcrumb (Dynamic) -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none text-muted">Home</a>
+            </li>
+            
+          </ol>
+        </nav>
+
+        <!-- RIGHT : Category Menu -->
+        <div class="category-menu d-none d-md-flex align-items-center">
+          <a href="furniture.html">Furniture</a>
+          <a href="application.html">Appliances</a>
+          <a href="electronics.html">Electronics</a>
+          <a href="packages.html">Packages</a>
+          <a href="fitness.html">Fitness</a>
+          <a href="babykid.html">Baby & Kids</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================= HEADER END ================= -->
+
+<div class="container my-1">
+<div class="row product-main-row">
 
 <!-- LEFT -->
-<div class="col-lg-8">
+<div class="col-lg-7">
     <div class="main-img-container mb-5">
         <img id="mainImage" class="main-img"
         src="https://roomstyle.decorexpro.com/wp-content/uploads/2018/02/holodilnik-v-interere-kuhni-23.jpg">
@@ -295,63 +136,270 @@ body{
 </div>
 
 <!-- RIGHT -->
-<div class="col-lg-4">
+<div class="col-lg-5">
     <div class="right-card position-sticky" style="top:24px">
 
-        <div class="d-flex justify-content-end mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-danger">SAVE 15%</span>
             <i class="bi bi-heart fs-4 text-muted"></i>
         </div>
 
         <h2 class="product-title">Single Door Fridge (210 Litre)</h2>
 
-        <p class="deposit-text mb-4">100% Refundable deposit ₹459-₹779</p>
-
-        <div class="mb-4">
-            <label class="tenure-label mb-2 d-block">Capacity:</label>
-            <div class="d-flex gap-2 flex-wrap">
-                <button class="btn capacity-btn">190 L</button>
-                <button class="btn capacity-btn">45 L</button>
-                <button class="btn capacity-btn active">210 L</button>
-                <button class="btn capacity-btn">170 L</button>
+        <div class="d-flex align-items-center mb-3">
+            <div class="stars me-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
             </div>
+            <span class="text-muted">(125 Reviews)</span>
         </div>
 
-        <div class="mb-4">
-            <div class="d-flex justify-content-between mb-2">
-                <label class="tenure-label">Choose Tenure</label>
-                <a href="#" class="compare-link">Compare All Tenures</a>
-            </div>
-            <input type="range" class="form-range" min="3" max="36" value="12">
-        </div>
-
-        <div class="price-box text-center mb-4">
+        <div class="price-box mb-4">
             <div class="monthly-price">₹789 <small>₹917</small></div>
-            <p class="text-muted mb-0">Monthly Rent</p>
+            <p class="text-muted mb-0">per month</p>
         </div>
 
-        <div class="promo-banner mb-4">
-            Get at ₹710/mo monthly rental<br>
-            <small>Pay Rent in Advance →</small>
+        <p class="deposit-text mb-4">
+            <i class="bi bi-shield-check me-2"></i>
+            Pay a 100% refundable deposit of ₹459 – ₹779
+        </p>
+
+        <div class="mb-4">
+            <label class="tenure-label mb-3 d-block">Capacity:</label>
+            <div id="capacity-options" class="d-flex gap-2 flex-wrap">
+                <button class="btn capacity-btn" data-capacity="170L">170 L</button>
+                <button class="btn capacity-btn" data-capacity="190L">190 L</button>
+                <button class="btn capacity-btn active" data-capacity="210L">210 L</button>
+            </div>
         </div>
 
-        <button class="btn btn-advance w-100 mb-3">Pay Rent in Advance →</button>
-        <button class="btn btn-book w-100">Book your plan</button>
+        <div class="mb-4">
+            <label class="tenure-label mb-3 d-block">Choose Your Tenure:</label>
+            <div id="tenure-options" class="d-flex gap-2 flex-wrap">
+                <button class="btn capacity-btn active" data-tenure="12">12 Months</button>
+                <button class="btn capacity-btn" data-tenure="24">24 Months</button>
+                <button class="btn capacity-btn" data-tenure="36">36 Months</button>
+            </div>
+        </div>
 
+        <button class="btn btn-book w-100">
+            <i class="bi bi-cart-plus me-2"></i>
+            Add to Cart
+        </button>
     </div>
 </div>
 
 </div>
+
+<!-- MORE DETAILS -->
+<div class="row mt-5 pt-5">
+    <div class="col-12">
+        <h5 class="section-title">Product Description</h5>
+        <p class="text-secondary">This single-door fridge is the perfect cooling solution for small families and bachelors. With a capacity of 210 litres, it offers ample space for your weekly groceries. The direct-cool technology ensures efficient cooling and the toughened glass shelves are designed to handle heavy utensils. It comes with a 4-star energy rating for lower power consumption.</p>
+
+        <h5 class="section-title">Specifications</h5>
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <th scope="row">Capacity</th>
+                    <td id="spec-capacity">210 Litres</td>
+                </tr>
+                <tr>
+                    <th scope="row">Energy Rating</th>
+                    <td>4 Star</td>
+                </tr>
+                <tr>
+                    <th scope="row">Technology</th>
+                    <td>Direct-Cool</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dimensions (HxWxD)</th>
+                    <td>124.7 x 53.6 x 61.9 cm</td>
+                </tr>
+                <tr>
+                    <th scope="row">Weight</th>
+                    <td>34 kg</td>
+                </tr>
+                 <tr>
+                    <th scope="row">Warranty</th>
+                    <td>1 Year on Product, 10 Years on Compressor</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
 
 <script>
-document.querySelectorAll('.thumb-img').forEach(img=>{
-    img.onclick=()=>{
-        document.getElementById('mainImage').src=img.dataset.full;
-        document.querySelectorAll('.thumb-img').forEach(i=>i.classList.remove('active'));
+// Thumbnail image switcher
+document.querySelectorAll('.thumb-img').forEach(img => {
+    img.onclick = () => {
+        document.getElementById('mainImage').src = img.dataset.full;
+        document.querySelectorAll('.thumb-img').forEach(i => i.classList.remove('active'));
         img.classList.add('active');
     }
 });
+
+// Dynamic Pricing Logic
+const priceData = {
+    '170L': {
+        '12': 689,
+        '24': 649,
+        '36': 609
+    },
+    '190L': {
+        '12': 749,
+        '24': 709,
+        '36': 669
+    },
+    '210L': {
+        '12': 789,
+        '24': 749,
+        '36': 709
+    }
+};
+
+const capacityOptions = document.getElementById('capacity-options');
+const tenureOptions = document.getElementById('tenure-options');
+const priceDisplay = document.querySelector('.monthly-price');
+const specCapacity = document.getElementById('spec-capacity');
+
+function updatePrice() {
+    const selectedCapacity = capacityOptions.querySelector('.active').dataset.capacity;
+    const selectedTenure = tenureOptions.querySelector('.active').dataset.tenure;
+
+    const price = priceData[selectedCapacity][selectedTenure];
+    const oldPrice = Math.round(price * 1.15); // Calculate a sample old price
+
+    priceDisplay.innerHTML = `₹${price} <small>₹${oldPrice}</small>`;
+    
+    // Update product title and spec table
+    document.querySelector('.product-title').textContent = `Single Door Fridge (${selectedCapacity})`;
+    specCapacity.textContent = `${selectedCapacity} Litres`;
+}
+
+capacityOptions.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        capacityOptions.querySelector('.active').classList.remove('active');
+        e.target.classList.add('active');
+        updatePrice();
+    }
+});
+
+tenureOptions.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        tenureOptions.querySelector('.active').classList.remove('active');
+        e.target.classList.add('active');
+        updatePrice();
+    }
+});
+
+// Set initial price on page load
+document.addEventListener('DOMContentLoaded', updatePrice);
+
 </script>
+
+<!-- footer -->
+
+<footer class="bg-light pt-5">
+  <div class="container">
+
+    <!-- Main Footer -->
+    <div class="row gy-4">
+
+      <!-- Column 1 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">RENTOMOJO</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Our Benefits</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">B2B - Rentomojo for Business</a></li>
+          <li><a href="#">Mojo Mover</a></li>
+          <li><a href="#">AQI</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">INFORMATION</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support Home</a></li>
+          <li><a href="#">Documents Required</a></li>
+          <li><a href="#">Annual Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">POLICIES</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Cancellation & Return</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">CSR Policy</a></li>
+          <li><a href="#">Rental Terms & Conditions</a></li>
+          <li><a href="#">Referral Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">NEED HELP ?</h6>
+        <p class="text-muted small">
+          <i class="bi bi-send me-2"></i> jo@rentomojo.com
+        </p>
+
+        <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
+        <div class="d-flex gap-2">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Footer -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+
+      <p class="text-muted small mb-2 mb-md-0">
+        © 2025, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)
+      </p>
+
+      <div class="d-flex gap-3 social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+
+      <a href="#" class="text-muted small text-decoration-none">
+        Go Up <i class="bi bi-chevron-up"></i>
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!-- jQuery --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 </body>
 </html>

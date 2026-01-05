@@ -1,0 +1,38 @@
+body{
+  background:#f5f7fb;
+}
+.card{
+  border-radius:14px;
+  border:1px solid #eee;
+  transition:.25s ease;
+}
+.card:hover{
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  transform:translateY(-4px);
+}
+.card-img-top{
+  height:180px;
+  object-fit:contain;
+  padding:12px;
+}
+.badge-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  font-size:11px;
+}
+.wishlist{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#fff;
+  padding:5px 7px;
+  border-radius:50%;
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+.price{
+  font-weight:600;
+}
+small{
+  font-size:12px;
+}

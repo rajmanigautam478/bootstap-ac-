@@ -1,0 +1,72 @@
+body {
+  background: #f2f2f2;
+}
+
+/* Center box */
+.city-wrapper {
+  width: 75%;
+  height: 70vh;  
+  margin: 60px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* City item */
+.city-box {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  box-sizing: border-box;
+  min-height: 130px;   /* ⭐ IMPORTANT */
+}
+
+
+
+/* Hover effect */
+.city-box:hover {
+  border: 2px solid #ff3b3b;
+}
+
+/* Icon */
+.city-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff3b3b;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.city-icon img {
+  width: 80%;
+}
+
+/* Text */
+.city-box p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* New label */
+.new{
+  display: block;
+  font-size: 12px;
+  color: red;
+}
+
+
+
+
+.form-control:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #ced4da;
+}

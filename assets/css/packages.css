@@ -1,0 +1,73 @@
+body {
+    background: #fff;
+}
+
+.room-card {
+    border: none;
+    position: relative;
+    overflow: visible;
+}
+
+.room-card img {
+    width: 100%;
+    border-radius: 3px;
+    min-height: 220px;
+    object-fit: cover;
+}
+
+/* Card Label */
+.card-label {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    min-width: 210px;
+    height: 70px; /* Fixed height */
+    display: flex;
+    align-items: center; /* Vertical center */
+    gap: 12px;
+}
+
+/* Icon styling */
+.card-label i {
+    font-size: 1.5rem;
+    color: #ff0000; /* Change color if needed */
+}
+
+/* Text container (h6 + small) */
+.card-label .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-label h6 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.card-label small {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin: 80px 0 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: red;
+    display: block;
+    margin: 10px auto 0;
+}
