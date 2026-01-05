@@ -15,9 +15,69 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/allproduct.css">
+<link rel="stylesheet" href="assets/css/packages.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .packages-header {
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .category-menu a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 15px; /* Increased font size slightly */
+    font-weight: 500; /* Medium font weight */
+    margin: 0 10px; /* Added horizontal margin */
+    transition: color 0.2s ease-in-out;
+  }
+  .category-menu a:hover {
+    color: #dc3545; /* Bootstrap's danger color, as used elsewhere */
+  }
+  .category-menu a.active {
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 5px;
+  }
+</style>
 </head>
 
 <body>
+    <!-- ================= HEADER STRIP ================= -->
+<div class="packages-header py-3 sticky-top">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+
+        <!-- LEFT : Breadcrumb (Dynamic) -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none text-muted">Home</a>
+            </li>
+            
+          </ol>
+        </nav>
+
+        <!-- RIGHT : Category Menu -->
+        <div class="category-menu d-none d-md-flex align-items-center">
+        
+          <a href="furniture.html">Furniture</a>
+          <a href="application.html">Appliances</a>
+          <a href="electronics.html">Electronics</a>
+          <a href="packages.html">Packages</a>
+          <a href="fitness.html">Fitness</a>
+          <a href="babykid.html">Baby & Kids</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================= HEADER END ================= -->
 
 <div class="container py-4">
 
@@ -125,5 +185,91 @@ document.querySelectorAll("select").forEach(s=>{
 render(laptops);
 </script>
 
+<footer class="bg-light pt-5">
+  <div class="container">
+
+    <!-- Top Read More -->
+    
+
+    <!-- Main Footer -->
+    <div class="row gy-4">
+
+      <!-- Column 1 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">RENTOMOJO</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Our Benefits</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">B2B - Rentomojo for Business</a></li>
+          <li><a href="#">Mojo Mover</a></li>
+          <li><a href="#">AQI</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">INFORMATION</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support Home</a></li>
+          <li><a href="#">Documents Required</a></li>
+          <li><a href="#">Annual Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-3">POLICIES</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Cancellation & Return</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">CSR Policy</a></li>
+          <li><a href="#">Rental Terms & Conditions</a></li>
+          <li><a href="#">Referral Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
+        <div class="d-flex gap-2">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
+          <img src="https://upload.wikimedia.org/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Footer -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+
+      <p class="text-muted small mb-2 mb-md-0">
+        © 2025, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)
+      </p>
+
+      <div class="d-flex gap-3 social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+
+      <a href="#" class="text-muted small text-decoration-none">
+        Go Up <i class="bi bi-chevron-up"></i>
+      </a>
+
+    </div>
+
+  </div>
+</footer>
 </body>
 </html>
