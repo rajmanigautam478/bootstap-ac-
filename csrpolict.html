@@ -3,70 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSR Policy</title>
+    <title>Cancellation & Return Policy</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="bootstap-ac-/assets/css/style.css">
-
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+        
+        footer {
+            flex-shrink: 0;
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+        
         .shipping-header {
             background-color: #00c3b0;
-            padding: 40px 0;
+            padding: 60px 0;
             color: white;
             text-align: center;
         }
+        
         .policy-intro {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             text-align: center;
         }
+        
         .policy-intro span {
             display: block;
-            margin-top: 10px;
-            font-size: 1.1rem;
+            margin-top: 12px;
+            font-size: 1.2rem;
+            color: #555;
         }
+        
         .red-line {
-            height: 4px;
-            width: 60px;
+            height: 5px;
+            width: 80px;
             background-color: red;
-            margin: 20px auto;
+            margin: 25px auto;
+            border-radius: 3px;
         }
+        
         .policy-item h6 {
             font-weight: 600;
             color: #333;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
         }
+        
         .policy-item p {
-            color: #666;
-            line-height: 1.6;
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
         }
+        
         .policy-card {
-            padding: 40px;
+            padding: 60px;
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
-        .sub-list {
-            padding-left: 20px;
-        }
-        .sub-list li {
-            margin-bottom: 8px;
+        
+        @media (min-width: 1200px) {
+            .main-content-container {
+                max-width: 1000px;
+            }
         }
     </style>
-    <link rel="stylesheet" href="assets/css/common-styles.css">
 </head>
 <body>
 
-    <!-- Nav (same as previous) -->
-    <nav class="navbar navbar-expand-lg bg-white pb-2">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white pb-2 shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="bootstap-ac-/index.html">
-                <img src="bootstap-ac-/assets/img/logo-new-navyblue.webp" height="40" class="me-2">
+                <img src="bootstap-ac-/assets/img/logo-new-navyblue.webp" height="40" class="me-2" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#rentNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -75,26 +101,12 @@
                 <ul class="navbar-nav ms-3">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-medium" href="#" data-bs-toggle="dropdown">Noida</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="city-wrapper shadow">
-                                    <input type="text" class="form-control mb-3" placeholder="Search city here">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Bangalore</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Mumbai</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Delhi</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Noida</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Lucknow <span class="new">New</span></p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Kolkata</p></div></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <!-- dropdown same -->
                     </li>
                 </ul>
                 <form class="d-flex flex-grow-1 mx-lg-4 my-1 my-lg-0">
                     <div class="input-group search-box">
-                        <input type="search" class="form-control border-2px" placeholder="Search for products">
+                        <input type="search" class="form-control" placeholder="Search for products">
                         <span class="input-group-text bg-transparent border-0"><i class="bi bi-search"></i></span>
                     </div>
                 </form>
@@ -109,74 +121,72 @@
     <!-- Header -->
     <section class="shipping-header">
         <div class="container">
-            <h1 class="display-5 fw-semibold">CSR Policy</h1>
+            <h1 class="display-4 fw-semibold">Cancellation & Return Policy</h1>
         </div>
     </section>
 
     <!-- Main Content -->
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-8">
-                <div class="policy-card shadow-sm">
+    <main>
+        <div class="container my-5 main-content-container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="policy-card">
+                        <div class="policy-intro">
+                            <h4 class="fw-semibold display-6">Anything you don’t like about the order?</h4>
+                            <span>Well, read on to find out how you can change it.</span>
+                            <div class="red-line"></div>
+                        </div>
 
-                    <div class="policy-intro">
-                        <h4 class="fw-semibold">Corporate Social Responsibility (CSR) Policy of Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)</h4>
-                        <div class="red-line"></div>
+                        <!-- Policy items same as before -->
+                        <div class="policy-item mb-5">
+                            <h6>1. How and till when can I modify my order?</h6>
+                            <p>You can modify your order items up to one day before the scheduled delivery date by reaching us on customer helpline, website/app chat, or email. Please note, date and time of delivery are subject to change due to modification of your order. On changing your order, rent and deposit will be automatically adjusted as per current rates at the time of placing your order. After successful confirmation, your monthly rental amount will be calculated based on the newly chosen items in your order.<br><br>
+                            As a customer and party to the rental contract, your products cannot be shifted from the address mentioned in the delivery address to any other location without notifying Rentomojo. In case of a change of address and assistance with relocation, please contact us two weeks prior to the relocation or raise a relocation request via the customer dashboard for further assistance.</p>
+                        </div>
+
+                        <div class="policy-item mb-5">
+                            <h6>2. How can I cancel my existing order?</h6>
+                            <p>You can cancel an order up until one day before the agreed date of delivery without any extra cost. Once delivered, an existing order cannot be cancelled.</p>
+                        </div>
+
+                        <div class="policy-item mb-5">
+                            <h6>3. Can I return a few or all items of the order if I'm not happy with the products at the time of delivery?</h6>
+                            <p>Yes. What if your products are in carton or damaged condition or you do not know how to use the product or it has defect or malfunctionality, you may return the same at the time of delivery if notified at the time of delivery. In case the product has been installed in your home or in use, then some return option will not be available at the time of delivery once our team installs and offers successful confirmation of your order delivery. We also advise checking the product's specified dimensions before placing the order as item rejection will not be considered eligible for return.</p>
+                        </div>
+
+                        <div class="policy-item mb-5">
+                            <h6>4. Can I close my rental subscription prior to the committed tenure?</h6>
+                            <p>Yes, you can. In case of early termination of your order, you can request for closure for one or all your items by informing us 7 days before the selected preferred date. Early closure charge will be applicable since the products will be returned before the end of your chosen tenure. To raise a closure request:<br>
+                            • Login to your RentoMojo account.<br>
+                            • Click on 'New Request' and choose 'Close Subscription'.<br>
+                            • Select the products you want to return.<br>
+                            • Choose a return date as per your convenience.<br><br>
+                            To avoid early closure charges, you can also consider the following options:<br>
+                            • In case you're looking to close your subscription due to relocation, you can check our list of operational cities and continue your current subscription from the new city.<br>
+                            • You can also transfer your subscription to someone else, and the early closure charges will no longer be applicable.<br><br>
+                            In case of any doubts or queries, we encourage you to use the chat feature on the website/app to know more about ownership transfer of your rented products.</p>
+                        </div>
+
+                        <div class="policy-item mb-5">
+                            <h6>5. What are the early closure charges?</h6>
+                            <p>Since the products will be returned before the end of your chosen tenure, the early closure charge is calculated based on your selected tenure and based on the category of products.<br>
+                            An Early Closure Charge is payable in case you decide to return the products before your current tenure is up. The charge payable is a multiple of your Monthly Rent, which is decided by the current tenure of your contract.<br>
+                            Please check your customer dashboard or your contract for the exact amount payable at any time.</p>
+                        </div>
+
+                        <div class="policy-item mb-5">
+                            <h6>6. How do I get my refundable deposit?</h6>
+                            <p>On approval of successful quality check of your rented products and clearance of any pending dues, a refund will be initiated towards your account. The same will be credited within 7-9 working days in the Bank account.<br><br>
+                            Bank Account Details shared should be under the name of the Customer on whose name the order was placed. If you want to receive the refund amount to a different account, please reach our customer support for further assistance.<br><br>
+                            In case of any damages to your rented products, RentoMojo will inspect the products at our warehouse to determine a detailed breakdown of damage costs. The damage cost will then be deducted from your refundable amount.</p>
+                        </div>
                     </div>
-
-                    <div class="policy-item mb-4">
-                        <h6>1. Introduction:</h6>
-                        <p>This corporate social responsibility policy (CSR Policy) outlines our commitment to conducting business in an ethical manner while contributing to the sustainable development of the communities in the geographies in which we operate.</p>
-                    </div>
-
-                    <div class="policy-item mb-4">
-                        <h6>2. Definition and Interpretation:</h6>
-                        <p>(a) "Board" means the Board of Directors of the Company.</p>
-                        <p>(b) "Company" means Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)</p>
-                        <p>(c) "CSR Activities" means such programs and projects as may be approved by the Board in terms of this CSR Policy.</p>
-                        <p>(d) "CSR Committee" means a committee constituted by the Board of Directors in terms of Section 135 of the Act and the rules formulated thereunder.</p>
-                        <p>(e) "CSR Policy" means this Policy.</p>
-                        <p>Capitalized terms used but not defined herein shall have the meanings ascribed to them in the relevant section of the CSR Policy.</p>
-                    </div>
-
-                    <div class="policy-item mb-4">
-                        <h6>3. Vision Statement, Objective and Applicability:</h6>
-                        <p>(a) Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.) (The Company) is committed to conducting its business in a socially responsible manner. This CSR Policy outlines our approach to CSR, including our objectives, initiatives, and governance.</p>
-                        <p>(b) This CSR Policy has been framed in accordance with the applicable provisions of the Companies Act, 2013 ("Act") and the rules issued thereunder.</p>
-                        <p>(c) Notwithstanding anything to the contrary contained in this CSR Policy but subject to applicable law, in the event that the Company fails to meet the thresholds set out under Section 135(1) of the Act for three consecutive financial years, it shall not be required to: (i) constitute/maintain the CSR Committee; and (ii) comply with the provisions of the CSR Policy until such time as it again meets the criteria specified in Section 135(1) of the Act.</p>
-                        <p>Until such time the CSR Committee is constituted, all functions of the CSR Committee as per the relevant sections of the Act, shall be carried out by the Board. In any financial year, if the Company needs to spend an amount of Rs 50 lakh or more on CSR Activities, then, in that financial year, the Board shall mandatorily constitute a CSR Committee, and the composition of such CSR Committee shall be in terms of applicable provisions of the Act. Notwithstanding any other provision of the CSR Policy, during the period when the function of the CSR Committee is being carried out by the Board, all references made to the CSR Committee in this CSR Policy shall be deemed to mean the Board, to the extent necessary.</p>
-                    </div>
-
-                    <div class="policy-item mb-4">
-                        <h6>4. CSR Committee:</h6>
-                        <p>(a) The CSR Committee shall be responsible for providing recommendations to the Board with respect to CSR Activities that may be undertaken by the Company in accordance with the CSR Policy as well as the Act and the rules made thereunder.</p>
-                        <p>(b) Without prejudice to the generality of the foregoing, the CSR Committee shall be responsible for the following activities:</p>
-                        <ol class="sub-list">
-                            <li>Formulating and recommending CSR Policy to the Board of Directors;</li>
-                            <li>Recommend the amount of expenditure to be incurred on CSR activities;</li>
-                            <li>Monitor the CSR Policy of the Company; and</li>
-                            <li>Formulate and recommend to the Board of Directors an annual action plan in pursuance of the CSR Policy in accordance with the applicable law, and inclusive of the following items:
-                                <ol type="a">
-                                    <li>the list of CSR projects or programmes that are approved to be undertaken in areas or subjects specified in Schedule VII of the Act;</li>
-                                    <li>the manner of execution of such projects or programmes;</li>
-                                    <li>the modalities of utilisation of funds and implementation schedules for the projects or programmes;</li>
-                                    <li>monitoring and reporting mechanism for the projects or programmes; and</li>
-                                    <li>details of need and impact assessment, if any, for the projects undertaken by the Company.</li>
-                                </ol>
-                            </li>
-                        </ol>
-                        <p>(c) Such other responsibilities as may be prescribed by the Board of Directors from time to time and as required by the relevant provision of the Companies Act, 2013.</p>
-                        <p>(d) The CSR Committee shall consist of at least two or more directors of the Company. The number of members of the CSR Committee and their powers and functions can be specified, varied, altered or modified from time to time by the Board, subject to the provisions of the applicable law.</p>
-                        <p>(e) The CSR Committee shall hold meetings which shall be attended by a minimum of two members of the CSR Committee. The meetings shall be held at the registered office or at any other place as may be agreed by the members of the Committee. The meetings can be conducted through video conferencing (VC).</p>
-                        <p>(f) All questions of interpretation or discrepancies which shall arise under, or as a result of, or pursuant to, or in connection with the implementation of the CSR Policy or any initiative or activities undertaken by the Company in terms of the CSR Policy, shall be referred to the CSR Committee for their inputs and the final decision/determination/interpretation shall rest with the Board.</p>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Footer (same as previous) -->
+    <!-- Footer - Ab perfectly bottom pe rahega -->
     <footer class="bg-light pt-5">
         <div class="container">
             <div class="row gy-4">
@@ -207,12 +217,12 @@
                 <div class="col-md-3">
                     <h6 class="fw-semibold mb-3">POLICIES</h6>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="shipping.html">Shipping Policy</a></li>
-                        <li><a href="cancellation.html">Cancellation & Return</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="csr-policy.html">CSR Policy</a></li>
-                        <li><a href="terms-and-conditions.html">Rental Terms & Conditions</a></li>
-                        <li><a href="referral.html">Referral Terms & Conditions</a></li>
+                        <li><a href="shiping.html">Shipping Policy</a></li>
+                        <li><a href="cancalation.html">Cancellation & Return</a></li>
+                        <li><a href="pricypolicy.html">Privacy Policy</a></li>
+                        <li><a href="#">CSR Policy</a></li>
+                        <li><a href="termandcontion.html">Rental Terms & Conditions</a></li>
+                        <li><a href="refound.html">Referral Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -220,8 +230,8 @@
                     <p class="text-muted small"><i class="bi bi-send me-2"></i> jo@rentomojo.com</p>
                     <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
                     <div class="d-flex gap-2">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40" alt="App Store">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40" alt="Google Play">
                     </div>
                 </div>
             </div>
@@ -240,9 +250,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

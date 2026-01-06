@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annual Returns Grid</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="bootstap-ac-/assets/css/style.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
     <style>
-        /* Top Banner Style */
+        /* Top Banner Style - Adjusted to match site theme */
         .header-banner {
-            background-color: #4ed3b5; /* Teal Green color from image */
-            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
+            background-color: #00c3b0; /* Matching site teal */
             padding: 40px 0;
             text-align: center;
             color: white;
             margin-bottom: 40px;
+        }
+        .header-banner h2 {
+            font-weight: 600;
+            font-size: 2.5rem;
         }
 
         /* Document Card Style */
@@ -70,68 +81,189 @@
             background-color: #ff5252;
             color: white;
         }
+
+        /* Footer list items gap */
+        .footer-links li {
+            margin-bottom: 8px;
+        }
     </style>
     <link rel="stylesheet" href="assets/css/common-styles.css">
 </head>
 <body>
 
-<div class="header-banner">
-    <h2 class="fw-normal">Annual Returns</h2>
-</div>
-
-<div class="container mb-5">
-    <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-            <div class="doc-card">
-                <div class="pdf-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
-                    <p class="doc-text">Annual Returns 2019-20</p>
-                </div>
-                <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
+    <!-- Nav (same as previous pages) -->
+    <nav class="navbar navbar-expand-lg bg-white pb-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="bootstap-ac-/index.html">
+                <img src="bootstap-ac-/assets/img/logo-new-navyblue.webp" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#rentNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="rentNavbar">
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium" href="#" data-bs-toggle="dropdown">Noida</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="city-wrapper shadow">
+                                    <input type="text" class="form-control mb-3" placeholder="Search city here">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Bangalore</p></div></div>
+                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Mumbai</p></div></div>
+                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Delhi</p></div></div>
+                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Noida</p></div></div>
+                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Lucknow <span class="new">New</span></p></div></div>
+                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Kolkata</p></div></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex flex-grow-1 mx-lg-4 my-1 my-lg-0">
+                    <div class="input-group search-box">
+                        <input type="search" class="form-control border-2px" placeholder="Search for products">
+                        <span class="input-group-text bg-transparent border-0"><i class="bi bi-search"></i></span>
+                    </div>
+                </form>
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="bootstap-ac-/cart.html"><i class="bi bi-cart"></i> Cart</a></li>
+                    <li class="nav-item"><a class="btn btn-danger px-4" href="bootstap-ac-/login.html">LOGIN / SIGNUP</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="doc-card">
-                <div class="pdf-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
-                    <p class="doc-text">Annual Returns 2020-21</p>
-                </div>
-                <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
-            </div>
+    <!-- Header Banner -->
+    <section class="header-banner">
+        <div class="container">
+            <h2 class="fw-normal">Annual Returns</h2>
         </div>
+    </section>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="doc-card">
-                <div class="pdf-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
-                    <p class="doc-text">Annual Returns 2021-22</p>
+    <!-- Main Content - Grid -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="doc-card">
+                    <div class="pdf-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
+                        <p class="doc-text">Annual Returns 2019-20</p>
+                    </div>
+                    <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
                 </div>
-                <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
             </div>
-        </div>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="doc-card">
-                <div class="pdf-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
-                    <p class="doc-text">Annual Returns 2022-23</p>
+            <div class="col-md-6 col-lg-4">
+                <div class="doc-card">
+                    <div class="pdf-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
+                        <p class="doc-text">Annual Returns 2020-21</p>
+                    </div>
+                    <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
                 </div>
-                <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
             </div>
-        </div>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="doc-card">
-                <div class="pdf-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
-                    <p class="doc-text">Annual Returns 2023-24</p>
+            <div class="col-md-6 col-lg-4">
+                <div class="doc-card">
+                    <div class="pdf-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
+                        <p class="doc-text">Annual Returns 2021-22</p>
+                    </div>
+                    <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
                 </div>
-                <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="doc-card">
+                    <div class="pdf-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
+                        <p class="doc-text">Annual Returns 2022-23</p>
+                    </div>
+                    <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="doc-card">
+                    <div class="pdf-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" class="pdf-icon-img" alt="PDF">
+                        <p class="doc-text">Annual Returns 2023-24</p>
+                    </div>
+                    <a href="#" class="arrow-btn"><i class="bi bi-chevron-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- Footer (consistent with previous pages - gaps + underline on Go Up) -->
+    <footer class="bg-light pt-5">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-3">
+                    <h6 class="fw-semibold mb-3">RENTOMOJO</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="culture.html">Culture</a></li>
+                        <li class="mb-2"><a href="inVester.html">Investors</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                        <li class="mb-2"><a href="supporthome.html">Contact</a></li>
+                        <li class="mb-2"><a href="#">Our Benefits</a></li>
+                        <li class="mb-2"><a href="sitemap.html">Sitemap</a></li>
+                        <li class="mb-2"><a href="#">B2B - Rentomojo for Business</a></li>
+                        <li class="mb-2"><a href="#">Mojo Mover</a></li>
+                        <li class="mb-2"><a href="aqi.html">AQI</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-semibold mb-3">INFORMATION</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Blog</a></li>
+                        <li class="mb-2"><a href="supporthome.html">Support Home</a></li>
+                        <li class="mb-2"><a href="document.html">Documents Required</a></li>
+                        <li class="mb-2"><a href="annual.html">Annual Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-semibold mb-3">POLICIES</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="shipping.html">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="cancellation.html">Cancellation & Return</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="csr-policy.html">CSR Policy</a></li>
+                        <li class="mb-2"><a href="terms-and-conditions.html">Rental Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="referral.html">Referral Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-semibold mb-3">NEED HELP ?</h6>
+                    <p class="text-muted small"><i class="bi bi-send me-2"></i> jo@rentomojo.com</p>
+                    <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
+                    <div class="d-flex gap-2">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-4">
+                <p class="text-muted small mb-2 mb-md-0">© 2025, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)</p>
+                <div class="d-flex gap-3 social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+                <a href="#" class="text-muted small">Go Up <i class="bi bi-chevron-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 </html>

@@ -19,6 +19,10 @@
             padding: 60px 0;
             text-align: center;
         }
+         a {
+            text-decoration: none;
+            color: inherit;
+        }
         .rm-header .logo {
             height: 50px;
             margin-bottom: 20px;
@@ -72,6 +76,13 @@
         footer {
             background-color: #f8f9fa;
         }
+        /* Footer fixes */
+        .footer-links li {
+            margin-bottom: 12px; /* Increased gap between footer list items */
+        }
+        footer .container {
+            overflow: hidden; /* Prevents any potential horizontal scroll */
+        }
     </style>
     <link rel="stylesheet" href="assets/css/common-styles.css">
 </head>
@@ -80,8 +91,8 @@
     <!-- Navigation (Same as your referral page example) -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm pb-2">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Rentomojo-logo.png" alt="Rentomojo Logo" height="40" class="me-2">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/img/logo-new-navyblue.webp" alt="Rentomojo Logo" height="40" class="me-2">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#rentNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -100,8 +111,8 @@
                     </div>
                 </form>
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart"></i> Cart</a></li>
-                    <li class="nav-item"><a class="btn btn-danger px-4" href="#">LOGIN / SIGNUP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart"></i> Cart</a></li>
+                    <li class="nav-item"><a class="btn btn-danger px-4" href="login.html">LOGIN / SIGNUP</a></li>
                 </ul>
             </div>
         </div>
@@ -110,7 +121,7 @@
     <!-- Header Section -->
     <header class="rm-header">
         <div class="container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Rentomojo-logo.png" alt="Rentomojo Logo" class="logo">
+            <img src="assets/img/logo-new-navyblue.webp" alt="Rentomojo Logo" class="logo">
             <h2>Advice and answers from the Rentomojo Team</h2>
             <div class="search-box-wrapper">
                 <input type="text" class="form-control" placeholder="Enter your search term here...">
@@ -162,7 +173,7 @@
         </div>
     </section>
 
-    <!-- Footer (Same as your referral page example) -->
+    <!-- Footer (Modified for better spacing and no scroll) -->
     <footer class="bg-light pt-5">
         <div class="container">
             <div class="row gy-4">

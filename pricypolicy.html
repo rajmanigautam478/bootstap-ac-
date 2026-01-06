@@ -5,62 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="bootstap-ac-/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
     <style>
-        .shipping-header {
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* All a tags - no underline, inherit color */
+        a {
+            text-decoration: none !important;
+            color: inherit !important;
+        }
+
+        a:hover {
+            color: #e32d22 !important;
+        }
+
+        .privacy-header {
             background-color: #00c3b0;
-            padding: 40px 0;
+            padding: 60px 0;
             color: white;
             text-align: center;
         }
+
+        .privacy-header h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+        }
+
         .policy-intro {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             text-align: center;
         }
-        .policy-intro span {
-            display: block;
-            margin-top: 10px;
-            font-size: 1.1rem;
+
+        .policy-intro h4 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: #333;
         }
+
         .red-line {
             height: 4px;
-            width: 60px;
-            background-color: red;
-            margin: 20px auto;
+            width: 80px;
+            background-color: #e32d22;
+            margin: 25px auto;
+            border-radius: 2px;
         }
+
+        .policy-card {
+            padding: 50px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
         .policy-item h6 {
             font-weight: 600;
             color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
         }
+
         .policy-item p {
-            color: #666;
-            line-height: 1.6;
+            color: #555;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
-        .policy-card {
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
+
+        .policy-item {
+            margin-bottom: 40px;
+        }
+
+        /* Footer improvements */
+        .footer-links li {
+            margin-bottom: 14px; /* Better gap between footer links */
+        }
+
+        footer .container {
+            padding-left: 40px;
+            padding-right: 40px;
+            max-width: 1400px; /* Wider container */
+            overflow: hidden; /* No horizontal scroll */
+        }
+
+        @media (max-width: 768px) {
+            footer .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .policy-card {
+                padding: 30px;
+            }
         }
     </style>
     <link rel="stylesheet" href="assets/css/common-styles.css">
 </head>
 <body>
 
-    <!-- Nav (same as previous) -->
-    <nav class="navbar navbar-expand-lg bg-white pb-2">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm pb-2">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="bootstap-ac-/index.html">
-                <img src="bootstap-ac-/assets/img/logo-new-navyblue.webp" height="40" class="me-2">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/img/logo-new-navyblue.webp" alt="Rentomojo Logo" height="40" class="me-2">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#rentNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -69,62 +121,47 @@
                 <ul class="navbar-nav ms-3">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-medium" href="#" data-bs-toggle="dropdown">Noida</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="city-wrapper shadow">
-                                    <input type="text" class="form-control mb-3" placeholder="Search city here">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Bangalore</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Mumbai</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Delhi</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Noida</p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Lucknow <span class="new">New</span></p></div></div>
-                                        <div class="col-custom"><div class="city-box"><div class="city-icon"><img src="bootstap-ac-/assets/img/image.png"></div><p>Kolkata</p></div></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <!-- City dropdown minimal -->
                     </li>
                 </ul>
                 <form class="d-flex flex-grow-1 mx-lg-4 my-1 my-lg-0">
                     <div class="input-group search-box">
-                        <input type="search" class="form-control border-2px" placeholder="Search for products">
+                        <input type="search" class="form-control" placeholder="Search for products">
                         <span class="input-group-text bg-transparent border-0"><i class="bi bi-search"></i></span>
                     </div>
                 </form>
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="bootstap-ac-/cart.html"><i class="bi bi-cart"></i> Cart</a></li>
-                    <li class="nav-item"><a class="btn btn-danger px-4" href="bootstap-ac-/login.html">LOGIN / SIGNUP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart"></i> Cart</a></li>
+                    <li class="nav-item"><a class="btn btn-danger px-4" href="login.html">LOGIN / SIGNUP</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <section class="shipping-header">
+    <section class="privacy-header">
         <div class="container">
-            <h1 class="display-5 fw-semibold">Privacy Policy</h1>
+            <h1>Privacy Policy</h1>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Main Content - Wider Section -->
     <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-8">
-                <div class="policy-card shadow-sm">
-
+            <div class="col-lg-11 col-xl-10"> <!-- Width increased for better readability -->
+                <div class="policy-card">
                     <div class="policy-intro">
-                        <h4 class="fw-semibold">We're Rentomojo, an online rental solution for your furnishing needs.</h4>
+                        <h4>We're Rentomojo, an online rental solution for your furnishing needs.</h4>
                         <div class="red-line"></div>
                     </div>
 
-                    <div class="policy-item mb-4">
+                    <div class="policy-item">
                         <p>Rentomojo is a website owned and operated by Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.), a company duly registered and incorporated under the Companies Act, 1956, whose address is at B-Block, Bhive Workspace - No.112, AKR Tech Park, 7th Mile, Hosur Road, Krishni Reddy Industrial Area, Bangalore - 560068, Karnataka, India. Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.) is strongly committed to your right to privacy and to keeping your personal and financial information secure. To earn your trust and confidence in our commitment, we are fully disclosing our privacy practices. We encourage you to read our privacy statement to understand what types of personally identifiable information we collect and how we use this information.</p>
 
                         <p>Rentomojo ("Website") is a market place for people to engage in subscription to experience with respect to furniture, appliances and other collectibles as a package or individual items by signing a personalized contract provided thereunder (hereinafter referred to as Services/Products). The information contained in this Website and the personal information collected by using/ login and or accessing this Website are stored at a secured server. It is stated by the server service provider that they have all the best security practices required for the server. The Website is owned by an Indian company and is located in India. Hence, we are duly bound to abide by the laws, regulations, rules, circulars, notifications etc. governing privacy in India. The Privacy Policy is applicable to all users of this Website. The use is herein collectively referred to as "You". You may note that this Privacy Policy may be updated and we may change the Privacy Policy as we may deem necessary from time to time, without notice to You. By accessing and/or using our Website, You do hereby agree to be bound by the terms and conditions of this Privacy Policy. If You do not agree please do not use or access our Website. By mere use of the Website, you expressly consent to our use and disclosure of your personal information in accordance with this Privacy Policy.</p>
                     </div>
 
-                    <div class="policy-item mb-4">
+                    <div class="policy-item">
                         <h6>1. Collection of Personal Information:</h6>
                         <p>For availing the Services/Products from the Website or to contact Rentomojo, you may have to sign up by giving/ providing personal information such as email address, name, phone number and address. Some of these information provided above are personally sensitive information ("Personal Information") and is collected for the purpose of verification of identity of the user and to ensure due compliance. We do use your contact information to send you offers based on your previous orders and your interests. In general, you can browse the Website without telling us who you are or revealing any Personal Information about yourself. Additionally if you choose to use our referral service to tell a friend about our Website, we will ask for your friend's name and email address. We will automatically send your friend a one-time email inviting him or her to visit the site. Rentomojo stores this information for the sole purpose of sending this one-time email and tracking the success of our referral program.</p>
 
@@ -133,17 +170,17 @@
                         <p>Authorization via Gmail provides you the option to share certain information with us, including your name, email address, and access to your email inbox and calendar in read-only mode, which you can revoke at any time. We may use this information for data analytics purposes but stay assured as your identity will remain highly anonymous.</p>
                     </div>
 
-                    <div class="policy-item mb-4">
+                    <div class="policy-item">
                         <h6>2. Information collected from third party:</h6>
                         <p>We may collect your Personal Information as well as other information from third parties like business partners, contractors, vendors etc and add the same to our account information.</p>
                     </div>
 
-                    <div class="policy-item mb-4">
+                    <div class="policy-item">
                         <h6>3. Information placed on your computer:</h6>
                         <p>We may store some information such as cookies on your computer. Cookies are pieces of information that an application transfers to the hard drive of a visitor's computer for record-keeping purposes. This information facilitates your use of Website and ensures that you do not need to re-enter your details every time you visit it. You can erase or choose to block this information from your computer if you want to. Erasing or blocking such information may limit the range of features available to the visitor on Website. We also use such information to provide visitors a personalized experience on Website. We may use such information to allow visitors to use Website without logging in upon returning.</p>
                     </div>
 
-                    <div class="policy-item mb-4">
+                    <div class="policy-item">
                         <h6>4. Information collected from your mobile device:</h6>
                         <p>(a) Personal Information: All the information that we collect is related to provide Rentomojo's services/features. We never receive any information unless you expressly choose to share it with us. Some examples of your personal information collected are Full-Name, Mobile Number, Delivery Address etc.</p>
                         <p>(b) Contacts: We use this to avoid any errors when entering the Mobile number of your choice for taking delivery. You can also use this to share your favorite Rentomojo products with your friends and family. We will never import or scan your contacts unless you ask us to.</p>
@@ -152,17 +189,16 @@
                         <p>(e) Camera: This allows you to choose individual pictures to change your user profile picture or eKYC upload of your documents for KYC purposes as per RBI (Reserve Bank of India) guidelines 2022. We will only access images that you specifically choose, and we will never scan or import your photo library or camera roll. You can stop sharing photos and revoke access at any time.</p>
                     </div>
 
-                    <div class="policy-item mb-4">
+                    <div class="policy-item">
                         <h6>5. Links:</h6>
                         <p>Our Website may contain links to other sites. Such other sites may use information about your visit to this Website. Our Privacy Policy does not apply to practices of such sites that we do not own or control, or to people we do not employ. Therefore, we are not responsible for the privacy practices or the accuracy or the integrity of the content included on such other sites. We encourage you to read the individual privacy statements of such websites.</p>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer (same as previous) -->
+    <!-- Footer - No Scroll, Better Spacing -->
     <footer class="bg-light pt-5">
         <div class="container">
             <div class="row gy-4">
@@ -206,29 +242,27 @@
                     <p class="text-muted small"><i class="bi bi-send me-2"></i> jo@rentomojo.com</p>
                     <h6 class="fw-semibold mt-4 mb-2">DOWNLOAD APP</h6>
                     <div class="d-flex gap-2">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="40">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" height="40">
                     </div>
                 </div>
             </div>
             <hr class="my-4">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
-                <p class="text-muted small mb-2 mb-md-0">© 2025, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)</p>
+                <p class="text-muted small mb-2 mb-md-0">© 2026, Rentomojo Private Limited (formerly Edunetwork Pvt. Ltd.)</p>
                 <div class="d-flex gap-3 social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="#"><i class="bi bi-youtube fs-5"></i></a>
+                    <a href="#"><i class="bi bi-instagram fs-5"></i></a>
                 </div>
-                <a href="#" class="text-muted small text-decoration-none">Go Up <i class="bi bi-chevron-up"></i></a>
+                <a href="#" class="text-muted small">Go Up <i class="bi bi-chevron-up"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
