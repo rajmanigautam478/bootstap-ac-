@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KYC</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f8fafc;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    /* Header */
+    .kyc-header {
+      background: linear-gradient(90deg, #26c6da, #2ec4b6);
+      padding: 50px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .kyc-tab {
+      border-bottom: 2px solid #e5e7eb;
+      margin: 30px auto;
+      max-width: 1100px;
+    }
+
+    .kyc-tab span {
+      border-bottom: 2px solid #ef4444;
+      padding-bottom: 6px;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .kyc-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      padding: 20px;
+      height: 100%;
+      background: #fff;
+    }
+
+    .kyc-card h6 {
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .kyc-card ul {
+      padding-left: 16px;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="kyc-header">
+  Know Your Customer
+</div>
+
+<!-- KYC Tab -->
+<div class="kyc-tab">
+  <span>KYC</span>
+</div>
+
+<!-- Cards -->
+<div class="container">
+  <div class="row g-4">
+
+    <!-- Working Professional -->
+    <div class="col-md-6">
+      <div class="kyc-card">
+        <h6><i class="bi bi-briefcase me-2"></i>Working Professional</h6>
+        <strong>Mandatory Documents</strong>
+        <ul>
+          <li>Pan Card</li>
+          <li>Selfie</li>
+          <li>Company name and Official Email ID</li>
+        </ul>
+        <p class="note">
+          Note: Rentomojo reserves the right to confirm or decline the order on a case by case basis.
+        </p>
+      </div>
+    </div>
+
+    <!-- Self Employed -->
+    <div class="col-md-6">
+      <div class="kyc-card">
+        <h6><i class="bi bi-person-workspace me-2"></i>Self Employed</h6>
+        <strong>Mandatory Documents</strong>
+        <ul>
+          <li>Pan Card</li>
+          <li>Selfie</li>
+          <li>GST number</li>
+        </ul>
+        <p class="note">
+          Note: Rentomojo reserves the right to confirm or decline the order on a case by case basis.
+        </p>
+      </div>
+    </div>
+
+    <!-- Freelance -->
+    <div class="col-md-6">
+      <div class="kyc-card">
+        <h6><i class="bi bi-send me-2"></i>Freelance</h6>
+        <strong>Mandatory Documents</strong>
+        <ul>
+          <li>Pan Card</li>
+          <li>Bank Statement</li>
+          <li>Selfie</li>
+        </ul>
+        <p class="note">
+          Note: Rentomojo reserves the right to confirm or decline the order on a case by case basis.
+        </p>
+      </div>
+    </div>
+
+    <!-- Students -->
+    <div class="col-md-6">
+      <div class="kyc-card">
+        <h6><i class="bi bi-mortarboard me-2"></i>Students</h6>
+
+        <strong>Mandatory Documents</strong>
+        <ul>
+          <li>Govt ID card</li>
+          <li>Profile pic</li>
+          <li>Bank statement</li>
+          <li>College name</li>
+        </ul>
+
+        <strong>Additional Documents</strong>
+        <ul>
+          <li>Parents Bank Statement</li>
+          <li>Parents Govt ID</li>
+        </ul>
+
+        <p class="note">
+          Note: Rentomojo reserves the right to confirm or decline the order on a case by case basis.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Note -->
+  <p class="footer-note">
+    Note: We do not deliver in PG, Hostel and Hotel addresses.
+  </p>
+</div>
+
+</body>
+</html>
