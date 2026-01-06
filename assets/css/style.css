@@ -70,7 +70,7 @@ body {
 /* slider */
 
 .carousel-wrapper{
-  max-width: 1320px;  
+  max-width: 1480px;  
   margin: auto;
 }
 
@@ -296,4 +296,30 @@ body {
 
 .dropdown-menu.show {
   display: block;
+}
+
+/* Custom styles for collapsed hamburger menu items */
+@media (max-width: 991.98px) { /* Applies only on small screens (Bootstrap's lg breakpoint and below) */
+  #categoryNavbar .navbar-nav {
+    flex-direction: column; /* Ensure vertical stacking */
+    width: 100%; /* Take full width */
+  }
+
+  #categoryNavbar .nav-item {
+    width: 100%; /* Ensure each item takes full width */
+    border-bottom: 1px solid #eee; /* Add a separator */
+  }
+
+  #categoryNavbar .nav-item:last-child {
+    border-bottom: none; /* No border for the last item */
+  }
+
+  #categoryNavbar .nav-link {
+    padding: 10px 15px; /* Add padding for better touch targets */
+    text-align: left; /* Align text to the left */
+  }
+
+  #categoryNavbar .nav-link:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+  }
 }
